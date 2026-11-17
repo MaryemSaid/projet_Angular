@@ -1,0 +1,32 @@
+<section class="card" id="notifications">
+
+    <div class="icon">
+        <i class="fa-solid fa-bell"></i>
+    </div>
+
+    <div>
+        <h2>Zone de notifications</h2>
+
+        <p>Vous avez 2 nouvelles notifications.</p>
+
+        <!-- Bouton afficher / masquer -->
+        <button (click)="toggleNotifications()">
+            {{ afficherNotifications ? 'Masquer les notifications' : 'Afficher les notifications' }}
+        </button>
+
+        <!-- Affichage conditionnel -->
+        @if (afficherNotifications) {
+
+            <p class="notification">
+                Une nouvelle conférence est disponible.
+            </p>
+
+            <p class="notification">
+                Sami vous a envoyé une invitation.
+            </p>
+
+        }
+
+    </div>
+
+</section>
